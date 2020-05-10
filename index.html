@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="description" content="My first webpage, with image">
+      <meta name="keywords" content="mths, website">
+      <meta name="author" content="Hayden Bronson">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Another Webpage</title>
+    </head>
+    <body>
+      <p>Guess the Random Number</p>
+      <p>Pick A Number 1-6</p>
+  <label for="Guess">Guess:</label>
+  <input type="text" id="Guess" name="Guess" ><br><br>
+  <input type="button" value="Submit" onclick="check_guess()">
+  <script>
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * Math.floor(max));
+        }
+        
+        function check_guess() {
+        let guess;
+        let randomNo = getRandomInt(6) + 1;
+        guess  = parseInt(document.getElementById("Guess").value);
+        console.log(guess , randomNo);
+
+        if (guess == randomNo) {
+          alert("Congratulations you guess was correct");
+        }
+        else {
+          alert("Sorry you were wrong the answer was " + randomNo);
+        }
+        
+      }
+  </script>
+    </body>
+</html>
